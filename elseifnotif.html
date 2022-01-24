@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const n = 15;
+
+    const multipleofthree = n%3 === 0;
+    const multipleoffive = n%5 === 0;
+
+    if(multipleofthree && multipleoffive){
+      console.log('n은 15의 배수입니다');
+    } else {
+      if(multipleofthree) {
+        console.log('n은 3의 배수입니다');
+      } else if (multipleoffive) {
+        console.log('n은 5의 배수 입니다');
+      } else {
+        console.log('n은 3의 배수도 아니고, 5의 배수도 아닙니다')
+      }
+    }
+  </script>
+</body>
+</html>
