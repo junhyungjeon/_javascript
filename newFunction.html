@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name,age){
+      console.log(this);
+      this.name=name;
+      this.age=age;
+    }
+
+    const p = new Person('mark',37);
+
+    console.log(p,p.name, p.age);
+
+    const a = new Person('anna',26);
+
+    console.log(a, a.name, a.age);
+  </script>
+</body>
+</html>
