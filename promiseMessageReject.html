@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function p(){
+      return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+          reject(new Error('bad'));
+        }, 3000);
+      });
+    }
+
+    p()
+      .then(message => {
+        console.log('3000ms후에 풀필드됩니다', message);
+      })
+      .catch(error => {
+        console.log('3초 뒤에 거절됩니다',error);
+      });
+  </script>
+</body>
+</html>
