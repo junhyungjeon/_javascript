@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function p(ms){
+      return new Promise((resolve,reject) => {
+        setTimeout(() => {
+          resolve(ms);
+        }, ms);
+      });
+    }
+
+    Promise. race([p(1000),p(2000), p(3000)]) .then(message => {
+      console.log('모두 fullfilled 된후 실행', message);
+    });
+  </script>
+</body>
+</html>
