@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="hello">
+    <h1>Grab me!</h1>
+  </div>
+  <script>
+    const h1 = document.querySelector(".hello h1");
+
+    function handleTitleClick(){
+      h1.style.color="blue";
+    }
+    function handleMouseEnter(){
+      h1.innerText="Mouse is here!";
+    }
+    function handleMouseLeave(){
+      h1.innerText="Mouse is gone!";
+    }
+    function handleWindowResize(){
+      document.body.style.backgroundColor = "tomato";
+    }
+    function handleWindowCopy(){
+      alert("copier!");
+    }
+
+    h1.addEventListener("click", handleTitleClick);
+    h1.addEventListener("mouseenter", handleMouseEnter);
+    h1.addEventListener("mouseleave", handleMouseLeave);
+
+    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener("copy", handleWindowCopy);
+  </script>
+</body>
+</html>
