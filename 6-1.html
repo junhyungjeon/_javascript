@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      background-color : beige;
+    }
+    h1{
+      color : cornflowerblue;
+      transition : color 0.5s ease-in-out;
+    }
+    .active{
+      color : tomato;
+    }
+  </style>
+</head>
+<body>
+  <div class="hello">
+    <h1>Click me!</h1>
+  </div>
+  <script>
+    const h1 = document.querySelector(".hello h1");
+
+    function handleTitleClick(){
+      h1.classList.toggle("clicked");
+    }
+
+    h1.addEventListener("click", handleTitleClick);
+  </script>
+</body>
+</html>
